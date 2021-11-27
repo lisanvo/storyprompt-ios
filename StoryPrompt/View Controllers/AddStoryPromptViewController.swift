@@ -35,7 +35,7 @@ class AddStoryPromptViewController: UIViewController {
 	@IBAction func generateStoryPrompt(_ sender: Any) {
 		updateStoryPrompt()
 		if storyPrompt.isValid() {
-			print(storyPrompt)
+			performSegue(withIdentifier: "StoryPrompt", sender: nil)
 		} else {
 			let alert = UIAlertController(title: "Invaid Story Prompt", message: "Please fill out all of the fields", preferredStyle: .alert)
 			let action = UIAlertAction(title: "OK", style: .default, handler: { action in
@@ -49,9 +49,6 @@ class AddStoryPromptViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		numberSlider.value = 7.5
-		storyPrompt.noun = "toaster"
-		storyPrompt.adjective = "smelly"
-		storyPrompt.verb = "burps"
 		storyPrompt.number = Int(numberSlider.value)
 		storyPromptImageView.isUserInteractionEnabled = true
 		let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(changeImage))
@@ -72,6 +69,15 @@ class AddStoryPromptViewController: UIViewController {
 		let controller = PHPickerViewController(configuration: configuration)
 		controller.delegate = self
 		present(controller, animated: true)
+	}
+	
+	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+		if segue.identifier == "StoryPrompt" {
+			guard let storyPromptViewController = segue.destination as? StoryPromptViewController else {
+				return
+			}
+			storyPromptViewController.storyPrompt = storyPrompt
+		}
 	}
 }
 
