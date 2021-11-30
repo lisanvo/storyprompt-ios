@@ -207,7 +207,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="New Story Prompt" id="CkW-T8-MTj"/>
                     <connections>
-                        <outlet property="adjectiveTextField" destination="QWc-bT-Oq4" id="vAZ-8T-bbf"/>
+                        <outlet property="adjectiveTextField" destination="fFk-LQ-PIL" id="asg-ry-BJH"/>
                         <outlet property="nounTextField" destination="P75-St-4y1" id="3cL-YZ-cJY"/>
                         <outlet property="numberLabel" destination="rZL-1B-MAc" id="0Mn-1V-hcC"/>
                         <outlet property="numberSlider" destination="QpR-zL-oA5" id="nS4-U4-jbW"/>
@@ -242,46 +242,22 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="IAm-AJ-Yhm">
-                                <rect key="frame" x="120.5" y="831" width="173" height="31"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4QI-sp-Nx5">
-                                        <rect key="frame" x="0.0" y="0.0" width="73.5" height="31"/>
-                                        <color key="tintColor" systemColor="labelColor"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Discard"/>
-                                        <connections>
-                                            <action selector="cancelStoryPrompt:" destination="nyn-84-QTc" eventType="touchUpInside" id="Aqw-8o-Fae"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gu3-Dz-mrC">
-                                        <rect key="frame" x="99.5" y="0.0" width="73.5" height="31"/>
-                                        <color key="tintColor" systemColor="labelColor"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Save"/>
-                                        <connections>
-                                            <segue destination="PoX-w2-lxh" kind="unwind" unwindAction="saveStoryPromptWithUnwindSegue:" id="A3g-AJ-fIK"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="J92-0c-hOu"/>
                         <color key="backgroundColor" red="0.0" green="0.89411764709999997" blue="0.59215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="IJe-Wc-XWe" firstAttribute="width" secondItem="ynB-TM-KER" secondAttribute="width" id="0j2-Ic-H48"/>
                             <constraint firstItem="N9e-et-Ehh" firstAttribute="centerY" secondItem="IJe-Wc-XWe" secondAttribute="centerY" id="Mm1-Q1-N5b"/>
-                            <constraint firstItem="IAm-AJ-Yhm" firstAttribute="centerX" secondItem="ynB-TM-KER" secondAttribute="centerX" id="XV2-1P-3Ce"/>
                             <constraint firstItem="IJe-Wc-XWe" firstAttribute="centerX" secondItem="ynB-TM-KER" secondAttribute="centerX" id="alX-4y-9F8"/>
                             <constraint firstItem="N9e-et-Ehh" firstAttribute="centerX" secondItem="IJe-Wc-XWe" secondAttribute="centerX" id="cV1-vC-LpV"/>
                             <constraint firstItem="IJe-Wc-XWe" firstAttribute="centerY" secondItem="ynB-TM-KER" secondAttribute="centerY" id="iVo-kX-6ez"/>
-                            <constraint firstItem="IAm-AJ-Yhm" firstAttribute="bottom" secondItem="J92-0c-hOu" secondAttribute="bottom" id="kuq-Ob-1Iu"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="kc0-Pc-3Ps"/>
                     <connections>
                         <outlet property="storyPromptTextView" destination="N9e-et-Ehh" id="M58-aR-Q2K"/>
                         <segue destination="PoX-w2-lxh" kind="unwind" identifier="CancelStoryPrompt" unwindAction="cancelStoryPromptWithUnwindSegue:" id="lYn-7H-GuV"/>
+                        <segue destination="PoX-w2-lxh" kind="unwind" identifier="SaveStoryPrompt" unwindAction="saveStoryPromptWithUnwindSegue:" id="h1j-f1-L6F"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qte-1a-x6b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -291,7 +267,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="U37-SE-Zy9"/>
+        <segue reference="9rW-Hj-3Tt"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="10.circle" catalog="system" width="128" height="121"/>
