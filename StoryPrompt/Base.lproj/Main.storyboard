@@ -18,11 +18,52 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="LMs-1i-v4p"/>
+                        <segue destination="9FT-og-LPF" kind="relationship" relationship="rootViewController" id="vR5-nZ-CWw"/>
                     </connections>
                 </navigationController>
             </objects>
-            <point key="canvasLocation" x="-823" y="100"/>
+            <point key="canvasLocation" x="-1771" y="100"/>
+        </scene>
+        <!--Story Prompt Table View Controller-->
+        <scene sceneID="l6J-JT-Be3">
+            <objects>
+                <tableViewController id="9FT-og-LPF" customClass="StoryPromptTableViewController" customModule="StoryPrompt" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="R79-T5-6So">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="StoryPromptCell" textLabel="abD-0r-iqQ" style="IBUITableViewCellStyleDefault" id="om7-Sb-Nmf">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="om7-Sb-Nmf" id="qpZ-zq-s3A">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="abD-0r-iqQ">
+                                            <rect key="frame" x="20" y="0.0" width="374" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="9FT-og-LPF" id="I2k-VW-bgY"/>
+                            <outlet property="delegate" destination="9FT-og-LPF" id="bEE-6A-ifl"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="EaV-ah-AU2"/>
+                    <connections>
+                        <segue destination="nyn-84-QTc" kind="show" identifier="ShowStoryPrompt" id="U37-SE-Zy9"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DyH-fl-F92" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-836" y="100"/>
         </scene>
         <!--New Story Prompt-->
         <scene sceneID="tne-QT-ifu">
@@ -33,7 +74,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="iCC-nd-OTp">
-                                <rect key="frame" x="20" y="145" width="374" height="653.5"/>
+                                <rect key="frame" x="20" y="101" width="374" height="653.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="GWx-Ct-cpK">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="34"/>
@@ -171,7 +212,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="37.681159420289859" y="90.401785714285708"/>
+            <point key="canvasLocation" x="22" y="-279"/>
         </scene>
         <!--Story Prompt View Controller-->
         <scene sceneID="Uhk-8w-PPj">
@@ -216,6 +257,9 @@
             <point key="canvasLocation" x="892.75362318840587" y="100.44642857142857"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="U37-SE-Zy9"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="10.circle" catalog="system" width="128" height="121"/>
         <image name="5.circle" catalog="system" width="128" height="121"/>
@@ -223,6 +267,9 @@
         <image name="object-object_box-of-books" width="1000" height="1000"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>
