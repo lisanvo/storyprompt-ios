@@ -31,6 +31,12 @@ class StoryPromptViewController: UIViewController {
 	}
 	
 	@objc func saveStoryPrompt(_ sender: Any) {
+		NotificationCenter.default.post(name: .StoryPromptSaved, object: storyPrompt)
 		performSegue(withIdentifier: "SaveStoryPrompt", sender: nil)
 	}
+}
+
+
+extension Notification.Name {
+	static let StoryPromptSaved = Notification.Name("StoryPromptSave")
 }
