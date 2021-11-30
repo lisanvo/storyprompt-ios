@@ -56,7 +56,13 @@
                             <outlet property="delegate" destination="9FT-og-LPF" id="bEE-6A-ifl"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="EaV-ah-AU2"/>
+                    <navigationItem key="navigationItem" id="EaV-ah-AU2">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="pSd-Z0-OtA">
+                            <connections>
+                                <segue destination="BYZ-38-t0r" kind="show" id="D6m-cs-WhF"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <segue destination="nyn-84-QTc" kind="show" identifier="ShowStoryPrompt" id="U37-SE-Zy9"/>
                     </connections>
@@ -74,7 +80,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="iCC-nd-OTp">
-                                <rect key="frame" x="20" y="101" width="374" height="653.5"/>
+                                <rect key="frame" x="20" y="145" width="374" height="653.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="GWx-Ct-cpK">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="34"/>
@@ -258,7 +264,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="U37-SE-Zy9"/>
+        <segue reference="9rW-Hj-3Tt"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="10.circle" catalog="system" width="128" height="121"/>
